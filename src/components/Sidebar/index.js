@@ -13,7 +13,7 @@ function Sidebar() {
                     <Link to="/">Home</Link>
                 </li>
                 <li className="px-6 py-3 items-center">
-                    <Link to="/about">About</Link>
+                    <Link to="/core-components">Core Components</Link>
                 </li>
                 <li className="px-6 py-3 items-center">
                     <Link to="/dashboard">Dashboard</Link>
