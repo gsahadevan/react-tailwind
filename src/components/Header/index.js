@@ -1,7 +1,6 @@
 import React, {useContext} from 'react';
 import {SidebarContext} from '../../contexts/SidebarContext';
 import {SearchIcon, MenuIcon} from '@heroicons/react/outline';
-import {PlusIcon} from '@heroicons/react/solid';
 import Profile from './Profile';
 import Notifications from './Notifications';
 import ThemeToggler from './ThemeToggler';
@@ -38,10 +37,6 @@ function Header() {
                 <div className="flex items-center pr-2">
                     {/* Theme toggler*/}
                     <ThemeToggler />
-                    <div className="flex">
-                        {/* Actions */}
-                        <PlusIcon className="ml-3 w-5 h-5" />
-                    </div>
                     {/* Chat notifications */}
                     <ChatNotifications />
                     {/* Notifications dropdown */}
