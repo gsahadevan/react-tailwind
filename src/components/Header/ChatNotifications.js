@@ -47,29 +47,30 @@ function ChatNotifications() {
                                 <div className="relative w-screen max-w-md">
                                     <div className="h-full flex flex-col py-6 bg-white shadow-xl overflow-y-scroll">
                                         <div className="px-4 sm:px-6">
-                                            <div className="flex justify-between">
+                                            <div className="flex justify-between mb-4">
                                                 <Dialog.Title className="text-lg font-medium text-gray-900">
                                                     Panel title
                                                 </Dialog.Title>
                                                 <button
-                                                    className="bg-purple-900 text-purple-100 px-2 py-1 rounded"
+                                                    className="text-purple-100 px-2 py-1"
                                                     onClick={() => {
                                                         setOpen((open) => !open);
                                                     }}
                                                 >
                                                     <span className="sr-only">Close panel</span>
-                                                    <XIcon className="h-3 w-3" aria-hidden="true" />
+                                                    <XIcon className="h-5 w-5" aria-hidden="true" />
                                                 </button>
                                             </div>
+                                            <hr />
                                         </div>
                                         <div className="mt-6 relative flex-1 px-4 sm:px-6">
                                             {/* Replace with your content */}
-                                            <div className="absolute inset-0 px-4 sm:px-6">
+                                            {/* <div className="absolute inset-0 px-4 sm:px-6">
                                                 <div
                                                     className="h-full border-2 border-dashed border-gray-200"
                                                     aria-hidden="true"
                                                 />
-                                            </div>
+                                            </div> */}
                                             {/* /End replace */}
                                         </div>
                                     </div>

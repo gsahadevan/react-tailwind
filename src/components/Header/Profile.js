@@ -1,6 +1,7 @@
 import React, {Fragment} from 'react';
 import {Menu, Transition} from '@headlessui/react';
 import {Link} from 'react-router-dom';
+import {CogIcon, LogoutIcon, UserIcon} from '@heroicons/react/outline';
 
 function Profile() {
     return (
@@ -27,18 +28,29 @@ function Profile() {
                 >
                     <Menu.Items className="origin-top-right absolute right-0 mt-2 w-48 rounded-md shadow-lg py-1 bg-white ring-1 ring-black ring-opacity-5 focus:outline-none">
                         <Menu.Item>
-                            <a href="#" className="block px-4 py-2 text-sm text-gray-700">
-                                Your Profile
+                            <a href="/profile" className="block px-2 py-1 text-sm text-gray-700">
+                                <div className="text-sm px-2 py-1 flex items-center hover:bg-gray-100 rounded">
+                                    <UserIcon className="h-4 w-4 mr-2" />
+                                    <span>Profile</span>
+                                </div>
                             </a>
                         </Menu.Item>
                         <Menu.Item>
-                            <a href="#" className="block px-4 py-2 text-sm text-gray-700">
-                                Settings
+                            <a href="/settings" className="block px-2 py-1 text-sm text-gray-700">
+                                <div className="text-sm px-2 py-1 flex items-center hover:bg-gray-100 rounded">
+                                    <CogIcon className="h-4 w-4 mr-2" />
+                                    <span>Settings</span>
+                                </div>
                             </a>
                         </Menu.Item>
                         <Menu.Item>
-                            <a href="#" className="block px-4 py-2 text-sm text-gray-700">
-                                <Link to="/login">Sign out</Link>
+                            <a href="/login" className="block px-2 py-1 text-sm text-gray-700">
+                                <Link to="/login">
+                                    <div className="text-sm px-2 py-1 flex items-center hover:bg-gray-100 rounded">
+                                        <LogoutIcon className="h-4 w-4 mr-2" />
+                                        <span>Sign out</span>
+                                    </div>
+                                </Link>
                             </a>
                         </Menu.Item>
                     </Menu.Items>
