@@ -10,7 +10,9 @@ function Layout() {
                 <Header />
                 <main className="h-full overflow-y-auto">
                     <div className="container grid px-6 mx-auto">
-                        <Outlet />
+                        <div className="mx-4">
+                            <Outlet />
+                        </div>
                     </div>
                 </main>
             </div>
