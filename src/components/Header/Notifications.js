@@ -25,26 +25,26 @@ function Notifications() {
                     leaveFrom="transform opacity-100 scale-100"
                     leaveTo="transform opacity-0 scale-95"
                 >
-                    <Menu.Items className="origin-top-right absolute right-0 mt-2 w-48 rounded-md shadow-lg py-1 bg-white ring-1 ring-black ring-opacity-5 focus:outline-none">
+                    <Menu.Items className="origin-top-right absolute right-0 mt-2 w-48 rounded-md shadow-lg py-1 bg-white dark:bg-gray-700 ring-1 ring-black ring-opacity-5 focus:outline-none">
                         <Menu.Item>
-                            <div className="flex justify-between text-sm px-4 py-2">
-                                <span className="text-gray-700">Messages</span>
-                                <span class="inline-flex items-center justify-center px-2 text-xs font-bold leading-none text-pink-100 bg-pink-500 rounded-md">
+                            <div className="flex justify-between text-sm mx-2 my-1 px-2 py-1 hover:bg-gray-100 dark:hover:bg-gray-800 rounded cursor-pointer">
+                                <span className="text-gray-700 dark:text-gray-100">Messages</span>
+                                <span class="inline-flex items-center justify-center px-2 py-1 text-xs font-bold leading-none text-pink-100 bg-pink-500 rounded-md">
                                     9
                                 </span>
                             </div>
                         </Menu.Item>
                         <Menu.Item>
-                            <div className="flex justify-between text-sm px-4 py-2">
-                                <span className="text-gray-700">Deadlines</span>
-                                <span class="inline-flex items-center justify-center px-2 text-xs font-bold leading-none text-pink-100 bg-pink-500 rounded-md">
+                            <div className="flex justify-between text-sm mx-2 my-1 px-2 py-1 hover:bg-gray-100 dark:hover:bg-gray-800 rounded cursor-pointer">
+                                <span className="text-gray-700 dark:text-gray-100">Deadlines</span>
+                                <span class="inline-flex items-center justify-center px-2 py-1 text-xs font-bold leading-none text-pink-100 bg-pink-500 rounded-md">
                                     2
                                 </span>
                             </div>
                         </Menu.Item>
                         <Menu.Item>
-                            <div className="flex justify-between text-sm px-4 py-2">
-                                <span className="text-gray-700">Alerts</span>
+                            <div className="flex justify-between text-sm mx-2 my-1 px-2 py-1 hover:bg-gray-100 dark:hover:bg-gray-800 rounded cursor-pointer">
+                                <span className="text-gray-700 dark:text-gray-100">Alerts</span>
                             </div>
                         </Menu.Item>
                     </Menu.Items>
