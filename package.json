@@ -1,5 +1,6 @@
 {
 	"name": "react-tailwind",
+	"homepage": "https://gsahadevan.github.io/react-tailwind/",
 	"version": "0.1.0",
 	"private": true,
 	"dependencies": {
