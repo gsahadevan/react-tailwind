@@ -3,6 +3,9 @@ import PageTitle from '../components/Typography/PageTitle';
 import mapDataStates from '../assets/maps/germany_states.geo.json';
 import MapsD3 from '../components/MapsD3';
 
+import {doughnutOptions, lineOptions, barOptions} from '../utils/demo/chartsData';
+import {Bar, Doughnut, Line} from 'react-chartjs-2';
+
 function Dashboard() {
     return (
         <>
@@ -71,6 +74,18 @@ function Dashboard() {
                 <div className="bg-white rounded shadow-xl dark:bg-gray-800 dark:text-gray-300">
                     <MapsD3 mapData={mapDataStates.features} />
                 </div>
+                <div className="bg-white rounded shadow-xl dark:bg-gray-800 dark:text-gray-300">
+                    <Doughnut {...doughnutOptions} />
+                </div>
+                <div className="bg-white rounded shadow-xl dark:bg-gray-800 dark:text-gray-300">
+                    <p className="mb-4 font-semibold text-gray-800 dark:text-gray-300">Distribution</p>
+                    <Bar {...barOptions} />
+                </div>
+            </div>
+
+            <div className="min-w-0 p-4 bg-white rounded-lg shadow-xs dark:bg-gray-800">
+                <p className="mb-4 font-semibold text-gray-800 dark:text-gray-300">Distribution</p>
+                <Line {...lineOptions} />
             </div>
         </>
     );

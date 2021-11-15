@@ -8,16 +8,16 @@ function ChatNotifications() {
     const [open, setOpen] = useState(false);
     return (
         <>
-            <div className="relative align-middle rounded-md focus:outline-none focus:shadow-outline-purple">
+            <div className="relative align-middle rounded-md focus:outline-none focus:shadow-outline-purple cursor-pointer">
                 <ChatAltIcon
-                    className="ml-3 w-5 h-5"
+                    className="w-5 h-5"
                     onClick={() => {
                         setOpen((open) => !open);
                     }}
                 />
                 <span
                     aria-hidden="true"
-                    className="absolute top-0 right-0 inline-block w-3 h-3 transform translate-x-1 -translate-y-1 bg-red-600 border-2 border-white rounded-full dark:border-gray-800"
+                    className="absolute top-0 right-0 inline-block w-3 h-3 transform translate-x-1 -translate-y-1 bg-pink-500 border-2 border-white rounded-full dark:border-gray-800"
                 ></span>
             </div>
             <Transition.Root show={open} as={Fragment}>
@@ -65,7 +65,7 @@ function ChatNotifications() {
                                         </div>
                                         <div className="mt-6 relative flex-1 px-4 sm:px-6">
                                             {/* Replace with your content */}
-                                            
+
                                             {/* /End replace */}
                                         </div>
                                     </div>

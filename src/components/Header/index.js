@@ -34,7 +34,7 @@ function Header() {
                         />
                     </div>
                 </div>
-                <div className="flex items-center pr-2">
+                <div className="flex items-center pr-2 space-x-4">
                     {/* Theme toggler*/}
                     <ThemeToggler />
                     {/* Chat notifications */}

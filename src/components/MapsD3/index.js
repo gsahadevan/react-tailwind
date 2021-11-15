@@ -22,8 +22,6 @@ function MapsD3({mapData}) {
 
         const projection = () => {
             return d3.geoMercator().center([51, 10]).scale(1800).translate([1500, 1800]);
-            // .scale(1800)
-            // .translate([1500, 1800]);
         };
 
         select(node).append('g').classed('countries', true);

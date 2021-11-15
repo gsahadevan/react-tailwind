@@ -5,14 +5,14 @@ import {BellIcon} from '@heroicons/react/solid';
 function Notifications() {
     return (
         <>
-            <Menu as="div" className="ml-3 relative">
+            <Menu as="div" className="relative">
                 <div>
                     <Menu.Button className="relative align-middle rounded-md focus:outline-none focus:shadow-outline-purple">
                         <span className="sr-only">Open notifications menu</span>
                         <BellIcon className="w-5 h-5" aria-hidden="true" />
                         <span
                             aria-hidden="true"
-                            className="absolute top-0 right-0 inline-block w-3 h-3 transform translate-x-1 -translate-y-1 bg-red-600 border-2 border-white rounded-full dark:border-gray-800"
+                            className="absolute animation-ping top-0 right-0 inline-block w-3 h-3 transform translate-x-1 -translate-y-1 bg-pink-500 border-2 border-white rounded-full dark:border-gray-800"
                         ></span>
                     </Menu.Button>
                 </div>
@@ -29,7 +29,7 @@ function Notifications() {
                         <Menu.Item>
                             <div className="flex justify-between text-sm px-4 py-2">
                                 <span className="text-gray-700">Messages</span>
-                                <span class="inline-flex items-center justify-center px-2 text-xs font-bold leading-none text-red-100 bg-red-600 rounded-md">
+                                <span class="inline-flex items-center justify-center px-2 text-xs font-bold leading-none text-pink-100 bg-pink-500 rounded-md">
                                     9
                                 </span>
                             </div>
@@ -37,7 +37,7 @@ function Notifications() {
                         <Menu.Item>
                             <div className="flex justify-between text-sm px-4 py-2">
                                 <span className="text-gray-700">Deadlines</span>
-                                <span class="inline-flex items-center justify-center px-2 text-xs font-bold leading-none text-red-100 bg-red-600 rounded-md">
+                                <span class="inline-flex items-center justify-center px-2 text-xs font-bold leading-none text-pink-100 bg-pink-500 rounded-md">
                                     2
                                 </span>
                             </div>
