@@ -1,21 +1,21 @@
 import React, {useContext} from 'react';
 import {WindmillContext} from '@windmill/react-ui';
 import {MoonIcon, SunIcon} from '@heroicons/react/solid';
+import {ThemeContext} from '../../contexts/ThemeContext';
 
 function ThemeToggler() {
-    const {mode, toggleMode} = useContext(WindmillContext);
+    const {theme, setTheme} = useContext(ThemeContext);
     return (
         <>
             <div className="flex">
                 <button
                     className="rounded-md focus:outline-none focus:shadow-outline-purple"
-                    onClick={toggleMode}
                     aria-label="Toggle color mode"
                 >
-                    {mode === 'dark' ? (
-                        <SunIcon className="w-5 h-5" aria-hidden="true" />
+                    {theme === 'dark' ? (
+                        <SunIcon className="w-5 h-5" aria-hidden="true" onClick={() => setTheme('light')} />
                     ) : (
-                        <MoonIcon className="w-5 h-5" aria-hidden="true" />
+                        <MoonIcon className="w-5 h-5" aria-hidden="true" onClick={() => setTheme('dark')} />
                     )}
                 </button>
             </div>

@@ -5,14 +5,17 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import {SidebarProvider} from './contexts/SidebarContext';
 import {BrowserRouter} from 'react-router-dom';
+import {ThemeProvider} from './contexts/ThemeContext';
 
 ReactDOM.render(
     <React.StrictMode>
-        <SidebarProvider>
-            <BrowserRouter>
-                <App />
-            </BrowserRouter>
-        </SidebarProvider>
+        <ThemeProvider>
+            <SidebarProvider>
+                <BrowserRouter>
+                    <App />
+                </BrowserRouter>
+            </SidebarProvider>
+        </ThemeProvider>
     </React.StrictMode>,
     document.getElementById('root')
 );
