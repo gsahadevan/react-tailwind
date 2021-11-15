@@ -2,6 +2,8 @@ import React from 'react';
 import {Map, GeoJSON, Marker, Tooltip} from 'react-leaflet';
 import PageTitle from '../components/Typography/PageTitle';
 import mapData from '../assets/maps/germany_states.geo.json';
+import MapsD3 from '../components/MapsD3';
+import SectionTitle from '../components/Typography/SectionTitle';
 
 function Maps() {
     const mapStyle = {
@@ -29,24 +31,22 @@ function Maps() {
 
     const onEachState = (feature, layer) => {
         // console.log(feature);
-        console.log(feature)
-        console.log(layer)
+        // console.log(layer);
     };
 
     const handleMoveEnd = () => {
-        console.log('move end')
-    }
+        console.log('move end');
+    };
 
     const onClick = (e) => {
-        console.log(e)
-    }
-
+        console.log(e);
+    };
 
     return (
         <>
             <PageTitle>Maps</PageTitle>
-
-            <div className="flex flex-row">
+            <SectionTitle>React Leaflet</SectionTitle>
+            <div className="flex flex-row my-5">
                 <div className="bg-white rounded shadow-xl dark:bg-gray-800 dark:text-gray-300">
                     {/* Center is the lat lng value of the center of the country */}
                     {/* Zoom level was obtained by trial and error */}
@@ -67,13 +67,20 @@ function Maps() {
                         onclick={onClick}
                     >
                         <GeoJSON data={mapData.features} onEachFeature={onEachState} />
-                        <Marker position={[52, 13]}>
+                        {/* <Marker position={[52, 13]}>
                             <Tooltip>I appear on mouse over</Tooltip>
-                        </Marker>
+                        </Marker> */}
                     </Map>
                 </div>
                 <div className="flex-1 bg-gray-800 text-gray-300 rounded shadow-xl dark:bg-gray-800 dark:text-gray-300 mx-4 px-4 py-2">
                     Should represent covid data
+                </div>
+            </div>
+
+            <SectionTitle>D3</SectionTitle>
+            <div className="flex flex-row my-5">
+                <div className="bg-white rounded shadow-xl dark:bg-gray-800 dark:text-gray-300">
+                    <MapsD3 mapData={mapData.features} />
                 </div>
             </div>
         </>
