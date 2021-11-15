@@ -50,7 +50,7 @@ function MapsD3({mapData}) {
 
     return (
         <>
-            <svg width="480" height="640" ref={map} />
+            <svg width="480" height="480" ref={map} />
         </>
     );
 }

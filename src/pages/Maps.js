@@ -1,7 +1,10 @@
 import React from 'react';
 import {Map, GeoJSON, Marker, Tooltip} from 'react-leaflet';
 import PageTitle from '../components/Typography/PageTitle';
-import mapData from '../assets/maps/germany_states.geo.json';
+import mapData from '../assets/maps/germany.geo.json';
+import mapDataStates from '../assets/maps/germany_states.geo.json';
+import mapDataDistricts from '../assets/maps/germany_districts.geo.json';
+import mapDataCounties from '../assets/maps/germany_counties.geo.json';
 import MapsD3 from '../components/MapsD3';
 import SectionTitle from '../components/Typography/SectionTitle';
 
@@ -66,22 +69,28 @@ function Maps() {
                         onEachFeature={onEachState}
                         onclick={onClick}
                     >
-                        <GeoJSON data={mapData.features} onEachFeature={onEachState} />
+                        <GeoJSON data={mapDataStates.features} onEachFeature={onEachState} />
                         {/* <Marker position={[52, 13]}>
                             <Tooltip>I appear on mouse over</Tooltip>
                         </Marker> */}
                     </Map>
                 </div>
-                <div className="flex-1 bg-gray-800 text-gray-300 rounded shadow-xl dark:bg-gray-800 dark:text-gray-300 mx-4 px-4 py-2">
+                <div className="flex-1 bg-gray-800 text-gray-300 rounded shadow-xl dark:bg-gray-800 dark:text-gray-300 ml-4 px-4 py-2">
                     Should represent covid data
                 </div>
             </div>
 
             <SectionTitle>D3</SectionTitle>
             <div className="flex flex-row my-5">
-                <div className="bg-white rounded shadow-xl dark:bg-gray-800 dark:text-gray-300">
-                    <MapsD3 mapData={mapData.features} />
+                <div className="bg-white rounded shadow-xl dark:bg-gray-800 dark:text-gray-300 mr-4">
+                    <MapsD3 mapData={mapDataStates.features} />
                 </div>
+                {/* <div className="bg-white rounded shadow-xl dark:bg-gray-800 dark:text-gray-300 mr-4">
+                    <MapsD3 mapData={mapDataDistricts.features} />
+                </div> */}
+                {/* <div className="bg-white rounded shadow-xl dark:bg-gray-800 dark:text-gray-300">
+                    <MapsD3 mapData={mapDataCounties.features} />
+                </div> */}
             </div>
         </>
     );

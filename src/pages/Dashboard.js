@@ -1,6 +1,7 @@
-import {ArrowSmUpIcon, TrendingDownIcon, TrendingUpIcon} from '@heroicons/react/outline';
 import React from 'react';
 import PageTitle from '../components/Typography/PageTitle';
+import mapDataStates from '../assets/maps/germany_states.geo.json';
+import MapsD3 from '../components/MapsD3';
 
 function Dashboard() {
     return (
@@ -16,7 +17,7 @@ function Dashboard() {
                         </svg>
                     </div>
                     <div>
-                        <p className="mb-2 text-sm font-medium text-gray-600 dark:text-gray-400">Total clients</p>
+                        <p className="text-sm font-medium text-gray-600 dark:text-gray-400">Users</p>
                         <p className="text-lg font-semibold text-gray-700 dark:text-gray-200">6389</p>
                     </div>
                 </div>
@@ -32,7 +33,7 @@ function Dashboard() {
                         </svg>
                     </div>
                     <div>
-                        <p className="mb-2 text-sm font-medium text-gray-600 dark:text-gray-400">Account balance</p>
+                        <p className="text-sm font-medium text-gray-600 dark:text-gray-400">Revenue</p>
                         <p className="text-lg font-semibold text-gray-700 dark:text-gray-200">$ 46,760.89</p>
                     </div>
                 </div>
@@ -44,7 +45,7 @@ function Dashboard() {
                         </svg>
                     </div>
                     <div>
-                        <p className="mb-2 text-sm font-medium text-gray-600 dark:text-gray-400">New sales</p>
+                        <p className="text-sm font-medium text-gray-600 dark:text-gray-400">Sales</p>
                         <p className="text-lg font-semibold text-gray-700 dark:text-gray-200">376</p>
                     </div>
                 </div>
@@ -60,106 +61,15 @@ function Dashboard() {
                         </svg>
                     </div>
                     <div>
-                        <p className="mb-2 text-sm font-medium text-gray-600 dark:text-gray-400">Pending contacts</p>
+                        <p className="text-sm font-medium text-gray-600 dark:text-gray-400">Leads</p>
                         <p className="text-lg font-semibold text-gray-700 dark:text-gray-200">35</p>
                     </div>
                 </div>
             </div>
 
-            <div>
-                <div className="flex flex-wrap">
-                    <div className="w-full lg:w-6/12 xl:w-3/12 px-4">
-                        <div className="relative flex flex-col min-w-0 break-words bg-white rounded mb-6 xl:mb-0 shadow-lg">
-                            <div className="flex-auto p-4">
-                                <div className="flex flex-wrap">
-                                    <div className="relative w-full pr-4 max-w-full flex-grow flex-1">
-                                        <h5 className="text-blueGray-400 uppercase font-bold text-xs">TRAFFIC</h5>
-                                        <span className="font-semibold text-xl text-blueGray-700">350,897</span>
-                                    </div>
-                                    <div className="relative w-auto pl-4 flex-initial">
-                                        <div className="text-white p-3 text-center inline-flex items-center justify-center w-12 h-12 shadow-lg rounded-full bg-red-500">
-                                            <i className="far fa-chart-bar"></i>
-                                        </div>
-                                    </div>
-                                </div>
-                                <p className="text-sm text-blueGray-400 mt-4">
-                                    <span className="text-emerald-500 mr-2">
-                                        <TrendingUpIcon className="w-5 h-5" /> 3.48%
-                                    </span>
-                                    <span className="whitespace-nowrap">Since last month</span>
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                    <div className="w-full lg:w-6/12 xl:w-3/12 px-4">
-                        <div className="relative flex flex-col min-w-0 break-words bg-white rounded mb-6 xl:mb-0 shadow-lg">
-                            <div className="flex-auto p-4">
-                                <div className="flex flex-wrap">
-                                    <div className="relative w-full pr-4 max-w-full flex-grow flex-1">
-                                        <h5 className="text-blueGray-400 uppercase font-bold text-xs">NEW USERS</h5>
-                                        <span className="font-semibold text-xl text-blueGray-700">2,356</span>
-                                    </div>
-                                    <div className="relative w-auto pl-4 flex-initial">
-                                        <div className="text-white p-3 text-center inline-flex items-center justify-center w-12 h-12 shadow-lg rounded-full bg-orange-500">
-                                            <i className="fas fa-chart-pie"></i>
-                                        </div>
-                                    </div>
-                                </div>
-                                <p className="text-sm text-blueGray-400 mt-4">
-                                    <span className="text-red-500 mr-2">
-                                        <TrendingDownIcon className="w-5 h-5" /> 3.48%
-                                    </span>
-                                    <span className="whitespace-nowrap">Since last week</span>
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                    <div className="w-full lg:w-6/12 xl:w-3/12 px-4">
-                        <div className="relative flex flex-col min-w-0 break-words bg-white rounded mb-6 xl:mb-0 shadow-lg">
-                            <div className="flex-auto p-4">
-                                <div className="flex flex-wrap">
-                                    <div className="relative w-full pr-4 max-w-full flex-grow flex-1">
-                                        <h5 className="text-blueGray-400 uppercase font-bold text-xs">SALES</h5>
-                                        <span className="font-semibold text-xl text-blueGray-700">924</span>
-                                    </div>
-                                    <div className="relative w-auto pl-4 flex-initial">
-                                        <div className="text-white p-3 text-center inline-flex items-center justify-center w-12 h-12 shadow-lg rounded-full bg-pink-500">
-                                            <i className="fas fa-users"></i>
-                                        </div>
-                                    </div>
-                                </div>
-                                <p className="text-sm text-blueGray-400 mt-4">
-                                    <span className="text-orange-500 mr-2">
-                                        <TrendingDownIcon className="w-5 h-5" /> 1.10%
-                                    </span>
-                                    <span className="whitespace-nowrap">Since yesterday</span>
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                    <div className="w-full lg:w-6/12 xl:w-3/12 px-4">
-                        <div className="relative flex flex-col min-w-0 break-words bg-white rounded mb-6 xl:mb-0 shadow-lg">
-                            <div className="flex-auto p-4">
-                                <div className="flex flex-wrap">
-                                    <div className="relative w-full pr-4 max-w-full flex-grow flex-1">
-                                        <h5 className="text-blueGray-400 uppercase font-bold text-xs">PERFORMANCE</h5>
-                                        <span className="font-semibold text-xl text-blueGray-700">49,65%</span>
-                                    </div>
-                                    <div className="relative w-auto pl-4 flex-initial">
-                                        <div className="text-white p-3 text-center inline-flex items-center justify-center w-12 h-12 shadow-lg rounded-full bg-lightBlue-500">
-                                            <i className="fas fa-percent"></i>
-                                        </div>
-                                    </div>
-                                </div>
-                                <p className="text-sm text-blueGray-400 mt-4">
-                                    <span className="text-emerald-500 mr-2">
-                                        <ArrowSmUpIcon className="w-5 h-5" /> 12%
-                                    </span>
-                                    <span className="whitespace-nowrap">Since last month</span>
-                                </p>
-                            </div>
-                        </div>
-                    </div>
+            <div className="grid gap-6 mb-8 md:grid-cols-3">
+                <div className="bg-white rounded shadow-xl dark:bg-gray-800 dark:text-gray-300">
+                    <MapsD3 mapData={mapDataStates.features} />
                 </div>
             </div>
         </>

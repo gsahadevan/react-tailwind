@@ -52,7 +52,7 @@ function ChatNotifications() {
                                                     Panel title
                                                 </Dialog.Title>
                                                 <button
-                                                    className="text-purple-100 px-2 py-1"
+                                                    className="text-purple-500 px-2 py-1"
                                                     onClick={() => {
                                                         setOpen((open) => !open);
                                                     }}
@@ -65,12 +65,7 @@ function ChatNotifications() {
                                         </div>
                                         <div className="mt-6 relative flex-1 px-4 sm:px-6">
                                             {/* Replace with your content */}
-                                            {/* <div className="absolute inset-0 px-4 sm:px-6">
-                                                <div
-                                                    className="h-full border-2 border-dashed border-gray-200"
-                                                    aria-hidden="true"
-                                                />
-                                            </div> */}
+                                            
                                             {/* /End replace */}
                                         </div>
                                     </div>
