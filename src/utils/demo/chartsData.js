@@ -15,7 +15,7 @@ export const doughnutOptions = {
     },
     options: {
         responsive: true,
-        cutout: '90%'
+        cutout: '80%'
     },
     legend: {
         display: false

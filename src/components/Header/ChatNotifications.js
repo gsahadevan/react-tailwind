@@ -45,14 +45,14 @@ function ChatNotifications() {
                                 leaveTo="translate-x-full"
                             >
                                 <div className="relative w-screen max-w-md">
-                                    <div className="h-full flex flex-col py-6 bg-white shadow-xl overflow-y-scroll">
+                                    <div className="h-full flex flex-col py-6 bg-white dark:bg-gray-900 shadow-xl overflow-y-scroll">
                                         <div className="px-4 sm:px-6">
                                             <div className="flex justify-between mb-4">
-                                                <Dialog.Title className="text-lg font-medium text-gray-900">
+                                                <Dialog.Title className="text-lg font-medium text-gray-900 dark:text-gray-100">
                                                     Panel title
                                                 </Dialog.Title>
                                                 <button
-                                                    className="text-purple-500 px-2 py-1"
+                                                    className="text-gray-900 dark:text-gray-100 focus:outline-none px-2 py-1"
                                                     onClick={() => {
                                                         setOpen((open) => !open);
                                                     }}

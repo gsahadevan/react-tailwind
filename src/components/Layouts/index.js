@@ -8,11 +8,11 @@ function Layout() {
             <Sidebar />
             <div className="flex flex-col flex-1 w-full">
                 <Header />
-                <main className="h-full overflow-y-auto">
-                    <div className="container grid px-6 mx-auto">
-                        <div className="mx-4">
+                <main className="h-full pb-16 overflow-y-auto">
+                    <div className="container grid px-12 mx-auto">
+                        {/* <div className="mx-4"> */}
                             <Outlet />
-                        </div>
+                        {/* </div> */}
                     </div>
                 </main>
             </div>
