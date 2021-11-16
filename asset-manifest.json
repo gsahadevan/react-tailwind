@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/react-tailwind/static/css/main.1f028e62.chunk.css",
-    "main.js": "/react-tailwind/static/js/main.464b2b74.chunk.js",
-    "main.js.map": "/react-tailwind/static/js/main.464b2b74.chunk.js.map",
+    "main.js": "/react-tailwind/static/js/main.4088620b.chunk.js",
+    "main.js.map": "/react-tailwind/static/js/main.4088620b.chunk.js.map",
     "runtime-main.js": "/react-tailwind/static/js/runtime-main.ef785a78.js",
     "runtime-main.js.map": "/react-tailwind/static/js/runtime-main.ef785a78.js.map",
     "static/js/2.11567ab2.chunk.js": "/react-tailwind/static/js/2.11567ab2.chunk.js",
@@ -19,6 +19,6 @@
     "static/js/runtime-main.ef785a78.js",
     "static/js/2.11567ab2.chunk.js",
     "static/css/main.1f028e62.chunk.css",
-    "static/js/main.464b2b74.chunk.js"
+    "static/js/main.4088620b.chunk.js"
   ]
 }
