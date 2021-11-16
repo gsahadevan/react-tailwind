@@ -11,7 +11,7 @@ ReactDOM.render(
     <React.StrictMode>
         <ThemeProvider>
             <SidebarProvider>
-                <BrowserRouter>
+                <BrowserRouter basename={process.env.PUBLIC_URL}>
                     <App />
                 </BrowserRouter>
             </SidebarProvider>
