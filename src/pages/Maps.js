@@ -1,14 +1,17 @@
-import React from 'react';
+import React, {useState} from 'react';
 import {Map, GeoJSON, Marker, Tooltip} from 'react-leaflet';
 import PageTitle from '../components/Typography/PageTitle';
 import mapData from '../assets/maps/germany.geo.json';
 import mapDataStates from '../assets/maps/germany_states.geo.json';
 import mapDataDistricts from '../assets/maps/germany_districts.geo.json';
 import mapDataCounties from '../assets/maps/germany_counties.geo.json';
+import worldMap from '../assets/maps/world.geo.json';
 import MapsD3 from '../components/MapsD3';
 import SectionTitle from '../components/Typography/SectionTitle';
+import WorldMap from '../components/MapsD3/WorldMap';
 
 function Maps() {
+    const [property, setProperty] = useState('pop_est');
     const mapStyle = {
         height: '640px',
         width: '480px'
@@ -48,6 +51,28 @@ function Maps() {
     return (
         <>
             <PageTitle>Maps</PageTitle>
+            <div className="flex items-stretch space-x-4">
+                <div className="w-1/3">
+                    <div className="bg-white rounded shadow-xl dark:bg-gray-800 dark:text-gray-300 p-4">
+                        <p className="mb-4 font-semibold text-gray-800 dark:text-gray-300">D3 - Germany</p>
+                        <MapsD3 mapData={mapDataStates.features} />
+                    </div>
+                </div>
+            </div>
+
+            <div className="flex flex-row my-5">
+                    <div className="bg-white rounded shadow-xl dark:bg-gray-800 dark:text-gray-300 p-4">
+                        <p className="mb-4 font-semibold text-gray-800 dark:text-gray-300">D3 - World Map</p>
+                        <WorldMap data={worldMap} property={property} />
+                        <h2>Select property to highlight</h2>
+                        <select value={property} onChange={(event) => setProperty(event.target.value)}>
+                            <option value="pop_est">Population</option>
+                            <option value="name_len">Name length</option>
+                            <option value="gdp_md_est">GDP</option>
+                        </select>
+                    </div>
+            </div>
+
             <SectionTitle>React Leaflet</SectionTitle>
             <div className="flex flex-row my-5">
                 <div className="bg-white rounded shadow-xl dark:bg-gray-800 dark:text-gray-300">
@@ -78,19 +103,6 @@ function Maps() {
                 <div className="flex-1 bg-gray-800 text-gray-300 rounded shadow-xl dark:bg-gray-800 dark:text-gray-300 ml-4 px-4 py-2">
                     Should represent covid data
                 </div>
-            </div>
-
-            <SectionTitle>D3</SectionTitle>
-            <div className="flex flex-row my-5">
-                <div className="bg-white rounded shadow-xl dark:bg-gray-800 dark:text-gray-300 mr-4">
-                    <MapsD3 mapData={mapDataStates.features} />
-                </div>
-                {/* <div className="bg-white rounded shadow-xl dark:bg-gray-800 dark:text-gray-300 mr-4">
-                    <MapsD3 mapData={mapDataDistricts.features} />
-                </div> */}
-                {/* <div className="bg-white rounded shadow-xl dark:bg-gray-800 dark:text-gray-300">
-                    <MapsD3 mapData={mapDataCounties.features} />
-                </div> */}
             </div>
         </>
     );

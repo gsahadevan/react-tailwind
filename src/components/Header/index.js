@@ -1,6 +1,6 @@
 import React, {useContext} from 'react';
 import {SidebarContext} from '../../contexts/SidebarContext';
-import {SearchIcon, MenuIcon} from '@heroicons/react/outline';
+import {MenuIcon} from '@heroicons/react/outline';
 import Profile from './Profile';
 import Notifications from './Notifications';
 import ThemeToggler from './ThemeToggler';

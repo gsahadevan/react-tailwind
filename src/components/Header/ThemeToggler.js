@@ -1,5 +1,4 @@
 import React, {useContext} from 'react';
-import {WindmillContext} from '@windmill/react-ui';
 import {MoonIcon, SunIcon} from '@heroicons/react/solid';
 import {ThemeContext} from '../../contexts/ThemeContext';
 
