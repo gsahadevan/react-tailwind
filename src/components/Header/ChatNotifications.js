@@ -8,13 +8,13 @@ function ChatNotifications() {
     const [open, setOpen] = useState(false);
     return (
         <>
-            <div className="relative align-middle rounded-md focus:outline-none focus:shadow-outline-purple cursor-pointer">
-                <ChatAltIcon
-                    className="w-5 h-5"
-                    onClick={() => {
-                        setOpen((open) => !open);
-                    }}
-                />
+            <div
+                className="relative align-middle rounded-md focus:outline-none focus:shadow-outline-purple cursor-pointer"
+                onClick={() => {
+                    setOpen((open) => !open);
+                }}
+            >
+                <ChatAltIcon className="w-5 h-5" />
                 <span
                     aria-hidden="true"
                     className="absolute top-0 right-0 inline-block w-3 h-3 transform translate-x-1 -translate-y-1 bg-pink-500 border-2 border-white rounded-full dark:border-gray-800"
