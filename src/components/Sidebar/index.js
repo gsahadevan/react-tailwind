@@ -1,4 +1,13 @@
-import {FolderIcon, HomeIcon, TemplateIcon, TrashIcon, UsersIcon, MapIcon} from '@heroicons/react/outline';
+import {
+    FolderIcon,
+    HomeIcon,
+    TemplateIcon,
+    TrashIcon,
+    UsersIcon,
+    MapIcon,
+    CollectionIcon,
+    FilterIcon
+} from '@heroicons/react/outline';
 import React from 'react';
 import {Link} from 'react-router-dom';
 
@@ -47,6 +56,38 @@ function Sidebar() {
                             <div className="text-sm px-4 py-2 flex items-center hover:bg-gray-100 dark:hover:bg-gray-900 dark:hover:text-gray-100 rounded">
                                 <MapIcon className="h-4 w-4 mr-2" />
                                 <span>Maps</span>
+                            </div>
+                        </Link>
+                    </li>
+                    <li className="px-2 py-1 items-center">
+                        <Link to="/modals">
+                            <div className="text-sm px-4 py-2 flex items-center hover:bg-gray-100 dark:hover:bg-gray-900 dark:hover:text-gray-100 rounded">
+                                <CollectionIcon className="h-4 w-4 mr-2" />
+                                <span>Modals</span>
+                            </div>
+                        </Link>
+                    </li>
+                    <li className="px-2 py-1 items-center">
+                        <Link to="/filters">
+                            <div className="text-sm px-4 py-2 flex items-center hover:bg-gray-100 dark:hover:bg-gray-900 dark:hover:text-gray-100 rounded">
+                                <FilterIcon className="h-4 w-4 mr-2" />
+                                <span>Filters</span>
+                            </div>
+                        </Link>
+                    </li>
+                    <li className="px-2 py-1 items-center">
+                        <Link to="/head">
+                            <div className="text-sm px-4 py-2 flex items-center hover:bg-gray-100 dark:hover:bg-gray-900 dark:hover:text-gray-100 rounded">
+                                <FilterIcon className="h-4 w-4 mr-2" />
+                                <span>Head</span>
+                            </div>
+                        </Link>
+                    </li>
+                    <li className="px-2 py-1 items-center">
+                        <Link to="/foot">
+                            <div className="text-sm px-4 py-2 flex items-center hover:bg-gray-100 dark:hover:bg-gray-900 dark:hover:text-gray-100 rounded">
+                                <FilterIcon className="h-4 w-4 mr-2" />
+                                <span>Foot</span>
                             </div>
                         </Link>
                     </li>
