@@ -9,13 +9,13 @@ import {ThemeProvider} from './contexts/ThemeContext';
 
 ReactDOM.render(
     <React.StrictMode>
-        <ThemeProvider>
+        {/* <ThemeProvider initialTheme={undefined} children={undefined}> */}
             <SidebarProvider>
                 <BrowserRouter basename={process.env.PUBLIC_URL}>
                     <App />
                 </BrowserRouter>
             </SidebarProvider>
-        </ThemeProvider>
+        {/* </ThemeProvider> */}
     </React.StrictMode>,
     document.getElementById('root')
 );
