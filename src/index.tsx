@@ -1,23 +1,39 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
+import ReactDOM from 'react-dom/client';
+import { createBrowserRouter, RouterProvider } from 'react-router-dom';
+
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-import {SidebarProvider} from './contexts/SidebarContext';
-import {BrowserRouter} from 'react-router-dom';
-import {ThemeProvider} from './contexts/ThemeContext';
+import Dashboard from './pages/Dashboard';
+import NotFoundPage from './pages/NotFoundPage';
+import Blank from './pages/Blank';
+import { ThemeProvider } from './contexts/ThemeContext';
 
-ReactDOM.render(
+const router = createBrowserRouter([
+    {
+        path: '/',
+        element: <App />,
+        errorElement: <NotFoundPage />,
+        children: [
+            {
+                path: '/dashboard',
+                element: <Dashboard />
+            },
+            {
+                path: '/blank',
+                element: <Blank />
+            },
+        ],
+    },
+]);
+
+ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
     <React.StrictMode>
-        {/* <ThemeProvider initialTheme={undefined} children={undefined}> */}
-            <SidebarProvider>
-                <BrowserRouter basename={process.env.PUBLIC_URL}>
-                    <App />
-                </BrowserRouter>
-            </SidebarProvider>
-        {/* </ThemeProvider> */}
-    </React.StrictMode>,
-    document.getElementById('root')
+        <ThemeProvider initialTheme={undefined}>
+            <RouterProvider router={router} />
+        </ThemeProvider>
+    </React.StrictMode>
 );
 
 // If you want to start measuring performance in your app, pass a function

@@ -1,4 +1,4 @@
-import {createContext, useEffect, useState} from 'react';
+import { createContext, useEffect, useState } from 'react';
 
 const getInitialTheme = () => {
     if (typeof window !== 'undefined' && window.localStorage) {
@@ -18,7 +18,7 @@ const getInitialTheme = () => {
 
 export const ThemeContext = createContext();
 
-export const ThemeProvider = ({initialTheme, children}) => {
+export const ThemeProvider = ({ initialTheme, children }) => {
     const [theme, setTheme] = useState(getInitialTheme);
 
     const rawSetTheme = (theme) => {
@@ -40,7 +40,7 @@ export const ThemeProvider = ({initialTheme, children}) => {
     }, [theme]);
 
     return (
-        <ThemeContext.Provider value={{theme, setTheme}}>
+        <ThemeContext.Provider value={{ theme, setTheme }}>
             {children}
         </ThemeContext.Provider>
     );

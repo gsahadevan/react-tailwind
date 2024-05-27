@@ -1,9 +1,9 @@
-import React, {useContext} from 'react';
-import {MoonIcon, SunIcon} from '@heroicons/react/solid';
-import {ThemeContext} from '../../contexts/ThemeContext';
+import React, { useContext } from 'react';
+import { MoonIcon, SunIcon } from '@heroicons/react/24/outline';
+import { ThemeContext } from '../../contexts/ThemeContext';
 
-function ThemeToggler() {
-    const {theme, setTheme} = useContext(ThemeContext);
+const ThemeToggler = (): JSX.Element => {
+    const { theme, setTheme } = useContext(ThemeContext);
     return (
         <>
             <div className="flex">

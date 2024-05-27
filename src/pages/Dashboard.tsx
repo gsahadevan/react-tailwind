@@ -1,23 +1,11 @@
-import React, {useState} from 'react';
 import PageTitle from '../components/Typography/PageTitle';
-import mapDataStates from '../assets/maps/germany_states.geo.json';
-import MapsD3 from '../components/MapsD3';
-import worldMap from '../assets/maps/world.geo.json';
 
-import {doughnutOptions, lineOptions, barOptions} from '../utils/demo/chartsData';
-import {Bar, Doughnut, Line} from 'react-chartjs-2';
-import Tables from './Tables';
-import WorldMap from '../components/MapsD3/WorldMap';
-
-function Dashboard() {
-    const [property, setProperty] = useState('pop_est');
-
+const Dashboard = () : JSX.Element => {
     return (
         <>
             <PageTitle>Dashboard</PageTitle>
 
             <div className="grid gap-4 md:mb-12 mb-4 lg:grid-cols-4 md:grid-cols-2">
-                {/* <!-- Card --> */}
                 <div className="flex items-center p-4 bg-white rounded shadow-xs dark:bg-gray-800">
                     <div className="p-3 mr-4 text-yellow-500 bg-yellow-100 rounded-full dark:text-yellow-100 dark:bg-yellow-500">
                         <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
@@ -29,7 +17,6 @@ function Dashboard() {
                         <p className="text-lg font-semibold text-gray-700 dark:text-gray-200">515</p>
                     </div>
                 </div>
-                {/* <!-- Card --> */}
                 <div className="flex items-center p-4 bg-white rounded shadow-xs dark:bg-gray-800">
                     <div className="p-3 mr-4 text-green-500 bg-green-100 rounded-full dark:text-green-100 dark:bg-green-500">
                         <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
@@ -45,7 +32,6 @@ function Dashboard() {
                         <p className="text-lg font-semibold text-gray-700 dark:text-gray-200">€ 454.867,00</p>
                     </div>
                 </div>
-                {/* <!-- Card --> */}
                 <div className="flex items-center p-4 bg-white rounded shadow-xs dark:bg-gray-800">
                     <div className="p-3 mr-4 text-blue-500 bg-blue-100 rounded-full dark:text-blue-100 dark:bg-blue-500">
                         <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
@@ -57,7 +43,6 @@ function Dashboard() {
                         <p className="text-lg font-semibold text-gray-700 dark:text-gray-200">654</p>
                     </div>
                 </div>
-                {/* <!-- Card --> */}
                 <div className="flex items-center p-4 bg-white rounded shadow-xs dark:bg-gray-800">
                     <div className="p-3 mr-4 text-pink-500 bg-pink-100 rounded-full dark:text-pink-100 dark:bg-pink-500">
                         <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
@@ -72,55 +57,6 @@ function Dashboard() {
                         <p className="text-sm font-medium text-gray-600 dark:text-gray-400">Leads</p>
                         <p className="text-lg font-semibold text-gray-700 dark:text-gray-200">19</p>
                     </div>
-                </div>
-            </div>
-
-            {/* <div className="grid gap-4 md:mb-12 mb-4 lg:grid-cols-4 md:grid-cols-2">
-                <div className="bg-white p-4 rounded shadow-xs dark:bg-gray-800">
-                    <p className="mb-4 font-semibold text-gray-800 dark:text-gray-300">Geo Distribution</p>
-                    <div className="relative w-full">
-                        <MapsD3 mapData={mapDataStates.features} />
-                    </div>
-                </div>
-            </div> */}
-
-            <div className="grid gap-6 mb-8 lg:grid-cols-3 md:grid-cols-1">
-                {/* <div className="bg-white p-4 rounded shadow-xs dark:bg-gray-800">
-                    <p className="mb-4 font-semibold text-gray-800 dark:text-gray-300">Geo Distribution</p>
-                    <MapsD3 mapData={mapDataStates.features} />
-                </div> */}
-
-                <div className="bg-white rounded shadow-xs dark:bg-gray-800 dark:text-gray-300 p-4">
-                    <p className="mb-4 font-semibold text-gray-800 dark:text-gray-300">D3 - World Map</p>
-                    <WorldMap data={worldMap} property={property} />
-                </div>
-
-                <div className="md:col-span-2 min-w-0 p-4 bg-white rounded shadow-xs dark:bg-gray-800">
-                    <p className="mb-4 font-semibold text-gray-800 dark:text-gray-300">Revenue Distribution</p>
-                    <div className="relative w-full">
-                        <Line {...lineOptions} />
-                    </div>
-                </div>
-            </div>
-
-            <div className="grid gap-6 mb-8 md:grid-cols-2">
-                <div className="bg-white p-4 rounded shadow-xs dark:bg-gray-800 dark:text-gray-300">
-                    <p className="mb-4 font-semibold text-gray-800 dark:text-gray-300">MQL Distribution</p>
-                    <div className="relative w-full">
-                        <Doughnut {...doughnutOptions} />
-                    </div>
-                </div>
-                <div className="bg-white p-4 rounded shadow-xs dark:bg-gray-800 dark:text-gray-300">
-                    <p className="mb-4 font-semibold text-gray-800 dark:text-gray-300">Sales Distribution</p>
-                    <div className="relative w-full">
-                        <Bar {...barOptions} />
-                    </div>
-                </div>
-            </div>
-
-            <div className="min-w-0 w-full overflow-hidden rounded shadow-xs bg-white dark:bg-gray-800">
-                <div className="relative w-full overflow-x-auto">
-                    <Tables />
                 </div>
             </div>
         </>

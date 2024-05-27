@@ -1,10 +1,7 @@
-import React, {useState} from 'react';
-import {Map, GeoJSON, Marker, Tooltip} from 'react-leaflet';
+import {useState} from 'react';
+import {Map, GeoJSON} from 'react-leaflet';
 import PageTitle from '../components/Typography/PageTitle';
-import mapData from '../assets/maps/germany.geo.json';
 import mapDataStates from '../assets/maps/germany_states.geo.json';
-import mapDataDistricts from '../assets/maps/germany_districts.geo.json';
-import mapDataCounties from '../assets/maps/germany_counties.geo.json';
 import worldMap from '../assets/maps/world.geo.json';
 import MapsD3 from '../components/MapsD3';
 import SectionTitle from '../components/Typography/SectionTitle';
