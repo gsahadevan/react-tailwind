@@ -45,12 +45,18 @@ function Tables() {
                     </td>
                     <td className="px-5 py-5 border-b border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800 dark:text-gray-300 text-sm">
                         <span className="relative inline-block px-3 py-1 font-semibold text-green-900 leading-tight">
-                            <span aria-hidden className="absolute inset-0 bg-green-200 opacity-50 rounded-full"></span>
+                            <span
+                                aria-hidden
+                                className="absolute inset-0 bg-green-200 opacity-50 rounded-full"
+                            ></span>
                             <span className="relative">Paid</span>
                         </span>
                     </td>
                     <td className="px-5 py-5 border-b border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800 dark:text-gray-300 text-sm text-right">
-                        <button type="button" className="inline-block text-gray-500 hover:text-gray-700">
+                        <button
+                            type="button"
+                            className="inline-block text-gray-500 hover:text-gray-700"
+                        >
                             <svg className="inline-block h-6 w-6 fill-current" viewBox="0 0 24 24">
                                 <path d="M12 6a2 2 0 110-4 2 2 0 010 4zm0 8a2 2 0 110-4 2 2 0 010 4zm-2 6a2 2 0 104 0 2 2 0 00-4 0z" />
                             </svg>
@@ -83,12 +89,18 @@ function Tables() {
                     </td>
                     <td className="px-5 py-5 border-b border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800 dark:text-gray-300 text-sm">
                         <span className="relative inline-block px-3 py-1 font-semibold text-green-900 leading-tight">
-                            <span aria-hidden className="absolute inset-0 bg-green-200 opacity-50 rounded-full"></span>
+                            <span
+                                aria-hidden
+                                className="absolute inset-0 bg-green-200 opacity-50 rounded-full"
+                            ></span>
                             <span className="relative">Paid</span>
                         </span>
                     </td>
                     <td className="px-5 py-5 border-b border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800 dark:text-gray-300 text-sm text-right">
-                        <button type="button" className="inline-block text-gray-500 hover:text-gray-700">
+                        <button
+                            type="button"
+                            className="inline-block text-gray-500 hover:text-gray-700"
+                        >
                             <svg className="inline-block h-6 w-6 fill-current" viewBox="0 0 24 24">
                                 <path d="M12 6a2 2 0 110-4 2 2 0 010 4zm0 8a2 2 0 110-4 2 2 0 010 4zm-2 6a2 2 0 104 0 2 2 0 00-4 0z" />
                             </svg>
@@ -121,12 +133,18 @@ function Tables() {
                     </td>
                     <td className="px-5 py-5 border-b border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800 dark:text-gray-300 text-sm">
                         <span className="relative inline-block px-3 py-1 font-semibold text-yellow-900 leading-tight">
-                            <span aria-hidden className="absolute inset-0 bg-yellow-200 opacity-50 rounded-full"></span>
+                            <span
+                                aria-hidden
+                                className="absolute inset-0 bg-yellow-200 opacity-50 rounded-full"
+                            ></span>
                             <span className="relative">Pending</span>
                         </span>
                     </td>
                     <td className="px-5 py-5 border-b border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800 dark:text-gray-300 text-sm text-right">
-                        <button type="button" className="inline-block text-gray-500 hover:text-gray-700">
+                        <button
+                            type="button"
+                            className="inline-block text-gray-500 hover:text-gray-700"
+                        >
                             <svg className="inline-block h-6 w-6 fill-current" viewBox="0 0 24 24">
                                 <path d="M12 6a2 2 0 110-4 2 2 0 010 4zm0 8a2 2 0 110-4 2 2 0 010 4zm-2 6a2 2 0 104 0 2 2 0 00-4 0z" />
                             </svg>
@@ -144,7 +162,9 @@ function Tables() {
                                 />
                             </div>
                             <div className="ml-3">
-                                <p className="text-gray-900 whitespace-no-wrap">Frederick Nicholas</p>
+                                <p className="text-gray-900 whitespace-no-wrap">
+                                    Frederick Nicholas
+                                </p>
                                 <p className="text-gray-600 whitespace-no-wrap">000001</p>
                             </div>
                         </div>
@@ -159,12 +179,18 @@ function Tables() {
                     </td>
                     <td className="px-5 py-5 bg-white dark:bg-gray-800 dark:text-gray-300 text-sm">
                         <span className="relative inline-block px-3 py-1 font-semibold text-red-900 leading-tight">
-                            <span aria-hidden className="absolute inset-0 bg-red-200 opacity-50 rounded-full"></span>
+                            <span
+                                aria-hidden
+                                className="absolute inset-0 bg-red-200 opacity-50 rounded-full"
+                            ></span>
                             <span className="relative">Overdue</span>
                         </span>
                     </td>
                     <td className="px-5 py-5 bg-white dark:bg-gray-800 dark:text-gray-300 text-sm text-right">
-                        <button type="button" className="inline-block text-gray-500 hover:text-gray-700">
+                        <button
+                            type="button"
+                            className="inline-block text-gray-500 hover:text-gray-700"
+                        >
                             <svg className="inline-block h-6 w-6 fill-current" viewBox="0 0 24 24">
                                 <path d="M12 6a2 2 0 110-4 2 2 0 010 4zm0 8a2 2 0 110-4 2 2 0 010 4zm-2 6a2 2 0 104 0 2 2 0 00-4 0z" />
                             </svg>

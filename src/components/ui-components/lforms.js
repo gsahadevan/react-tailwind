@@ -23,7 +23,8 @@ export default function LForms() {
                         <div className="px-4 sm:px-0">
                             <h3 className="text-lg font-medium leading-6 text-gray-900">Profile</h3>
                             <p className="mt-1 text-sm text-gray-600">
-                                This information will be displayed publicly so be careful what you share.
+                                This information will be displayed publicly so be careful what you
+                                share.
                             </p>
                         </div>
                     </div>
@@ -55,7 +56,10 @@ export default function LForms() {
                                     </div>
 
                                     <div>
-                                        <label htmlFor="about" className="block text-sm font-medium text-gray-700">
+                                        <label
+                                            htmlFor="about"
+                                            className="block text-sm font-medium text-gray-700"
+                                        >
                                             About
                                         </label>
                                         <div className="mt-1">
@@ -69,12 +73,15 @@ export default function LForms() {
                                             />
                                         </div>
                                         <p className="mt-2 text-sm text-gray-500">
-                                            Brief description for your profile. URLs are hyperlinked.
+                                            Brief description for your profile. URLs are
+                                            hyperlinked.
                                         </p>
                                     </div>
 
                                     <div>
-                                        <label className="block text-sm font-medium text-gray-700">Photo</label>
+                                        <label className="block text-sm font-medium text-gray-700">
+                                            Photo
+                                        </label>
                                         <div className="mt-1 flex items-center">
                                             <span className="inline-block h-12 w-12 rounded-full overflow-hidden bg-gray-100">
                                                 <svg
@@ -95,7 +102,9 @@ export default function LForms() {
                                     </div>
 
                                     <div>
-                                        <label className="block text-sm font-medium text-gray-700">Cover photo</label>
+                                        <label className="block text-sm font-medium text-gray-700">
+                                            Cover photo
+                                        </label>
                                         <div className="mt-1 flex justify-center px-6 pt-5 pb-6 border-2 border-gray-300 border-dashed rounded-md">
                                             <div className="space-y-1 text-center">
                                                 <svg
@@ -127,7 +136,9 @@ export default function LForms() {
                                                     </label>
                                                     <p className="pl-1">or drag and drop</p>
                                                 </div>
-                                                <p className="text-xs text-gray-500">PNG, JPG, GIF up to 10MB</p>
+                                                <p className="text-xs text-gray-500">
+                                                    PNG, JPG, GIF up to 10MB
+                                                </p>
                                             </div>
                                         </div>
                                     </div>
@@ -156,7 +167,9 @@ export default function LForms() {
                 <div className="md:grid md:grid-cols-3 md:gap-6">
                     <div className="md:col-span-1">
                         <div className="px-4 sm:px-0">
-                            <h3 className="text-lg font-medium leading-6 text-gray-900">Personal Information</h3>
+                            <h3 className="text-lg font-medium leading-6 text-gray-900">
+                                Personal Information
+                            </h3>
                             <p className="mt-1 text-sm text-gray-600">
                                 Use a permanent address where you can receive mail.
                             </p>
@@ -251,7 +264,10 @@ export default function LForms() {
                                         </div>
 
                                         <div className="col-span-6 sm:col-span-6 lg:col-span-2">
-                                            <label htmlFor="city" className="block text-sm font-medium text-gray-700">
+                                            <label
+                                                htmlFor="city"
+                                                className="block text-sm font-medium text-gray-700"
+                                            >
                                                 City
                                             </label>
                                             <input
@@ -264,7 +280,10 @@ export default function LForms() {
                                         </div>
 
                                         <div className="col-span-6 sm:col-span-3 lg:col-span-2">
-                                            <label htmlFor="region" className="block text-sm font-medium text-gray-700">
+                                            <label
+                                                htmlFor="region"
+                                                className="block text-sm font-medium text-gray-700"
+                                            >
                                                 State / Province
                                             </label>
                                             <input
@@ -317,7 +336,9 @@ export default function LForms() {
                 <div className="md:grid md:grid-cols-3 md:gap-6">
                     <div className="md:col-span-1">
                         <div className="px-4 sm:px-0">
-                            <h3 className="text-lg font-medium leading-6 text-gray-900">Notifications</h3>
+                            <h3 className="text-lg font-medium leading-6 text-gray-900">
+                                Notifications
+                            </h3>
                             <p className="mt-1 text-sm text-gray-600">
                                 Decide which communications you'd like to receive and how.
                             </p>
@@ -328,7 +349,9 @@ export default function LForms() {
                             <div className="shadow overflow-hidden sm:rounded-md">
                                 <div className="px-4 py-5 bg-white space-y-6 sm:p-6">
                                     <fieldset>
-                                        <legend className="text-base font-medium text-gray-900">By Email</legend>
+                                        <legend className="text-base font-medium text-gray-900">
+                                            By Email
+                                        </legend>
                                         <div className="mt-4 space-y-4">
                                             <div className="flex items-start">
                                                 <div className="flex items-center h-5">
@@ -340,11 +363,15 @@ export default function LForms() {
                                                     />
                                                 </div>
                                                 <div className="ml-3 text-sm">
-                                                    <label htmlFor="comments" className="font-medium text-gray-700">
+                                                    <label
+                                                        htmlFor="comments"
+                                                        className="font-medium text-gray-700"
+                                                    >
                                                         Comments
                                                     </label>
                                                     <p className="text-gray-500">
-                                                        Get notified when someones posts a comment on a posting.
+                                                        Get notified when someones posts a comment
+                                                        on a posting.
                                                     </p>
                                                 </div>
                                             </div>
@@ -358,11 +385,15 @@ export default function LForms() {
                                                     />
                                                 </div>
                                                 <div className="ml-3 text-sm">
-                                                    <label htmlFor="candidates" className="font-medium text-gray-700">
+                                                    <label
+                                                        htmlFor="candidates"
+                                                        className="font-medium text-gray-700"
+                                                    >
                                                         Candidates
                                                     </label>
                                                     <p className="text-gray-500">
-                                                        Get notified when a candidate applies for a job.
+                                                        Get notified when a candidate applies for a
+                                                        job.
                                                     </p>
                                                 </div>
                                             </div>
@@ -376,11 +407,15 @@ export default function LForms() {
                                                     />
                                                 </div>
                                                 <div className="ml-3 text-sm">
-                                                    <label htmlFor="offers" className="font-medium text-gray-700">
+                                                    <label
+                                                        htmlFor="offers"
+                                                        className="font-medium text-gray-700"
+                                                    >
                                                         Offers
                                                     </label>
                                                     <p className="text-gray-500">
-                                                        Get notified when a candidate accepts or rejects an offer.
+                                                        Get notified when a candidate accepts or
+                                                        rejects an offer.
                                                     </p>
                                                 </div>
                                             </div>

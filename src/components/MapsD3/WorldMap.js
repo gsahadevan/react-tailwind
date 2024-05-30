@@ -1,8 +1,8 @@
-import React, {useRef, useEffect, useState} from 'react';
-import {select, geoPath, geoMercator, min, max, scaleLinear} from 'd3';
+import React, { useRef, useEffect, useState } from 'react';
+import { select, geoPath, geoMercator, min, max, scaleLinear } from 'd3';
 import useResizeObserver from './useResizeObserver';
 
-function WorldMap({data, property}) {
+function WorldMap({ data, property }) {
     const svgRef = useRef();
     const wrapperRef = useRef();
     const dimensions = useResizeObserver(wrapperRef);
@@ -18,11 +18,11 @@ function WorldMap({data, property}) {
 
         // use resized dimensions
         // but fall back to getBoundingClientRect, if no dimensions yet.
-        const {width, height} = dimensions || wrapperRef.current.getBoundingClientRect();
+        const { width, height } = dimensions || wrapperRef.current.getBoundingClientRect();
 
-        console.log(width)
-        console.log(height)
-        console.log(dimensions)
+        console.log(width);
+        console.log(height);
+        console.log(dimensions);
 
         // projects geo-coordinates on a 2D plane
         const projection = geoMercator()
@@ -38,10 +38,10 @@ function WorldMap({data, property}) {
             .data(data.features)
             .join('path')
             .on('click', (feature) => {
-                console.log(feature)
-                console.log(this)
-                console.log(data)
-                console.log(selectedCountry)
+                console.log(feature);
+                console.log(this);
+                console.log(data);
+                console.log(selectedCountry);
 
                 // setSelectedCountry(selectedCountry === feature ? null : feature);
             })
@@ -63,7 +63,7 @@ function WorldMap({data, property}) {
     }, [data, dimensions, property, selectedCountry]);
 
     return (
-        <div className="relative w-full" ref={wrapperRef} style={{marginBottom: '2rem'}}>
+        <div className="relative w-full" ref={wrapperRef} style={{ marginBottom: '2rem' }}>
             <svg ref={svgRef}></svg>
         </div>
     );

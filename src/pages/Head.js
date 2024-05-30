@@ -1,6 +1,6 @@
 /* This example requires Tailwind CSS v2.0+ */
-import {Fragment} from 'react';
-import {Popover, Transition} from '@headlessui/react';
+import { Fragment } from 'react';
+import { Popover, Transition } from '@headlessui/react';
 import {
     BookmarkAltIcon,
     CalendarIcon,
@@ -15,7 +15,7 @@ import {
     ViewGridIcon,
     XIcon
 } from '@heroicons/react/outline';
-import {ChevronDownIcon} from '@heroicons/react/solid';
+import { ChevronDownIcon } from '@heroicons/react/solid';
 
 const solutions = [
     {
@@ -30,7 +30,12 @@ const solutions = [
         href: '#',
         icon: CursorClickIcon
     },
-    {name: 'Security', description: "Your customers' data will be safe and secure.", href: '#', icon: ShieldCheckIcon},
+    {
+        name: 'Security',
+        description: "Your customers' data will be safe and secure.",
+        href: '#',
+        icon: ShieldCheckIcon
+    },
     {
         name: 'Integrations',
         description: "Connect with third-party tools that you're already using.",
@@ -45,8 +50,8 @@ const solutions = [
     }
 ];
 const callsToAction = [
-    {name: 'Watch Demo', href: '#', icon: PlayIcon},
-    {name: 'Contact Sales', href: '#', icon: PhoneIcon}
+    { name: 'Watch Demo', href: '#', icon: PlayIcon },
+    { name: 'Contact Sales', href: '#', icon: PhoneIcon }
 ];
 const resources = [
     {
@@ -67,12 +72,21 @@ const resources = [
         href: '#',
         icon: CalendarIcon
     },
-    {name: 'Security', description: 'Understand how we take your privacy seriously.', href: '#', icon: ShieldCheckIcon}
+    {
+        name: 'Security',
+        description: 'Understand how we take your privacy seriously.',
+        href: '#',
+        icon: ShieldCheckIcon
+    }
 ];
 const recentPosts = [
-    {id: 1, name: 'Boost your conversion rate', href: '#'},
-    {id: 2, name: 'How to use search engine optimization to drive traffic to your site', href: '#'},
-    {id: 3, name: 'Improve your customer experience', href: '#'}
+    { id: 1, name: 'Boost your conversion rate', href: '#' },
+    {
+        id: 2,
+        name: 'How to use search engine optimization to drive traffic to your site',
+        href: '#'
+    },
+    { id: 3, name: 'Improve your customer experience', href: '#' }
 ];
 
 function classNames(...classes) {
@@ -102,7 +116,7 @@ export default function Head() {
                     </div>
                     <Popover.Group as="nav" className="hidden md:flex space-x-10">
                         <Popover className="relative">
-                            {({open}) => (
+                            {({ open }) => (
                                 <>
                                     <Popover.Button
                                         className={classNames(
@@ -164,7 +178,9 @@ export default function Head() {
                                                                     className="flex-shrink-0 h-6 w-6 text-gray-400"
                                                                     aria-hidden="true"
                                                                 />
-                                                                <span className="ml-3">{item.name}</span>
+                                                                <span className="ml-3">
+                                                                    {item.name}
+                                                                </span>
                                                             </a>
                                                         </div>
                                                     ))}
@@ -176,15 +192,21 @@ export default function Head() {
                             )}
                         </Popover>
 
-                        <a href="#" className="text-base font-medium text-gray-500 hover:text-gray-900">
+                        <a
+                            href="#"
+                            className="text-base font-medium text-gray-500 hover:text-gray-900"
+                        >
                             Pricing
                         </a>
-                        <a href="#" className="text-base font-medium text-gray-500 hover:text-gray-900">
+                        <a
+                            href="#"
+                            className="text-base font-medium text-gray-500 hover:text-gray-900"
+                        >
                             Docs
                         </a>
 
                         <Popover className="relative">
-                            {({open}) => (
+                            {({ open }) => (
                                 <>
                                     <Popover.Button
                                         className={classNames(
@@ -242,7 +264,10 @@ export default function Head() {
                                                         </h3>
                                                         <ul role="list" className="mt-4 space-y-4">
                                                             {recentPosts.map((post) => (
-                                                                <li key={post.id} className="text-base truncate">
+                                                                <li
+                                                                    key={post.id}
+                                                                    className="text-base truncate"
+                                                                >
                                                                     <a
                                                                         href={post.href}
                                                                         className="font-medium text-gray-900 hover:text-gray-700"
@@ -259,7 +284,8 @@ export default function Head() {
                                                             className="font-medium text-indigo-600 hover:text-indigo-500"
                                                         >
                                                             {' '}
-                                                            View all posts <span aria-hidden="true">&rarr;</span>
+                                                            View all posts{' '}
+                                                            <span aria-hidden="true">&rarr;</span>
                                                         </a>
                                                     </div>
                                                 </div>
@@ -339,11 +365,17 @@ export default function Head() {
                         </div>
                         <div className="py-6 px-5 space-y-6">
                             <div className="grid grid-cols-2 gap-y-4 gap-x-8">
-                                <a href="#" className="text-base font-medium text-gray-900 hover:text-gray-700">
+                                <a
+                                    href="#"
+                                    className="text-base font-medium text-gray-900 hover:text-gray-700"
+                                >
                                     Pricing
                                 </a>
 
-                                <a href="#" className="text-base font-medium text-gray-900 hover:text-gray-700">
+                                <a
+                                    href="#"
+                                    className="text-base font-medium text-gray-900 hover:text-gray-700"
+                                >
                                     Docs
                                 </a>
                                 {resources.map((item) => (

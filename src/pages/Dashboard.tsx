@@ -1,9 +1,9 @@
-import PageTitle from '../components/Typography/PageTitle';
+import Headline from '../components/base/typography/Headline';
 
-const Dashboard = () : JSX.Element => {
+const Dashboard = (): JSX.Element => {
     return (
         <>
-            <PageTitle>Dashboard</PageTitle>
+            <Headline>Dashboard</Headline>
 
             <div className="grid gap-4 md:mb-12 mb-4 lg:grid-cols-4 md:grid-cols-2">
                 <div className="flex items-center p-4 bg-white rounded shadow-xs dark:bg-gray-800">
@@ -13,8 +13,12 @@ const Dashboard = () : JSX.Element => {
                         </svg>
                     </div>
                     <div>
-                        <p className="text-sm font-medium text-gray-600 dark:text-gray-400">Users</p>
-                        <p className="text-lg font-semibold text-gray-700 dark:text-gray-200">515</p>
+                        <p className="text-sm font-medium text-gray-600 dark:text-gray-400">
+                            Users
+                        </p>
+                        <p className="text-lg font-semibold text-gray-700 dark:text-gray-200">
+                            515
+                        </p>
                     </div>
                 </div>
                 <div className="flex items-center p-4 bg-white rounded shadow-xs dark:bg-gray-800">
@@ -28,8 +32,12 @@ const Dashboard = () : JSX.Element => {
                         </svg>
                     </div>
                     <div>
-                        <p className="text-sm font-medium text-gray-600 dark:text-gray-400">Revenue</p>
-                        <p className="text-lg font-semibold text-gray-700 dark:text-gray-200">€ 454.867,00</p>
+                        <p className="text-sm font-medium text-gray-600 dark:text-gray-400">
+                            Revenue
+                        </p>
+                        <p className="text-lg font-semibold text-gray-700 dark:text-gray-200">
+                            € 454.867,00
+                        </p>
                     </div>
                 </div>
                 <div className="flex items-center p-4 bg-white rounded shadow-xs dark:bg-gray-800">
@@ -39,8 +47,12 @@ const Dashboard = () : JSX.Element => {
                         </svg>
                     </div>
                     <div>
-                        <p className="text-sm font-medium text-gray-600 dark:text-gray-400">Sales</p>
-                        <p className="text-lg font-semibold text-gray-700 dark:text-gray-200">654</p>
+                        <p className="text-sm font-medium text-gray-600 dark:text-gray-400">
+                            Sales
+                        </p>
+                        <p className="text-lg font-semibold text-gray-700 dark:text-gray-200">
+                            654
+                        </p>
                     </div>
                 </div>
                 <div className="flex items-center p-4 bg-white rounded shadow-xs dark:bg-gray-800">
@@ -54,13 +66,15 @@ const Dashboard = () : JSX.Element => {
                         </svg>
                     </div>
                     <div>
-                        <p className="text-sm font-medium text-gray-600 dark:text-gray-400">Leads</p>
+                        <p className="text-sm font-medium text-gray-600 dark:text-gray-400">
+                            Leads
+                        </p>
                         <p className="text-lg font-semibold text-gray-700 dark:text-gray-200">19</p>
                     </div>
                 </div>
             </div>
         </>
     );
-}
+};
 
 export default Dashboard;

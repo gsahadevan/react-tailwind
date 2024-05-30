@@ -23,9 +23,9 @@ const router = createBrowserRouter([
             {
                 path: '/blank',
                 element: <Blank />
-            },
-        ],
-    },
+            }
+        ]
+    }
 ]);
 
 ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(

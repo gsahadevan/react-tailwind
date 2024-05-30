@@ -1,7 +1,7 @@
 import React from 'react';
-import ChatBubbleLeftEllipsisIcon from '@heroicons/react/24/outline/ChatBubbleLeftEllipsisIcon'
+import ChatBubbleLeftEllipsisIcon from '@heroicons/react/24/outline/ChatBubbleLeftEllipsisIcon';
 
-const ChatNotification = () : JSX.Element => {
+const ChatNotification = (): JSX.Element => {
     return (
         <>
             <div className="relative align-middle rounded-md focus:outline-none focus:shadow-outline-purple cursor-pointer">
@@ -13,6 +13,6 @@ const ChatNotification = () : JSX.Element => {
             </div>
         </>
     );
-}
+};
 
 export default ChatNotification;

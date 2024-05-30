@@ -12,14 +12,22 @@ const ThemeToggler = (): JSX.Element => {
                     aria-label="Toggle color mode"
                 >
                     {theme === 'dark' ? (
-                        <SunIcon className="w-5 h-5" aria-hidden="true" onClick={() => setTheme('light')} />
+                        <SunIcon
+                            className="w-5 h-5"
+                            aria-hidden="true"
+                            onClick={() => setTheme('light')}
+                        />
                     ) : (
-                        <MoonIcon className="w-5 h-5" aria-hidden="true" onClick={() => setTheme('dark')} />
+                        <MoonIcon
+                            className="w-5 h-5"
+                            aria-hidden="true"
+                            onClick={() => setTheme('dark')}
+                        />
                     )}
                 </button>
             </div>
         </>
     );
-}
+};
 
 export default ThemeToggler;

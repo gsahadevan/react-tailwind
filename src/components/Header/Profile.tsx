@@ -11,6 +11,6 @@ const Profile = (): JSX.Element => {
             </div>
         </>
     );
-}
+};
 
 export default Profile;

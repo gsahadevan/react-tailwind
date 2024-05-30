@@ -1,7 +1,7 @@
-import { lazy } from 'react'
+import { lazy } from 'react';
 
 // use lazy for better code splitting, a.k.a. load faster
-const Dashboard = lazy(() => import('../pages/Dashboard'))
+const Dashboard = lazy(() => import('../pages/Dashboard'));
 // const Forms = lazy(() => import('../pages/Forms'))
 // const Cards = lazy(() => import('../pages/Cards'))
 // const Charts = lazy(() => import('../pages/Charts'))
@@ -9,7 +9,7 @@ const Dashboard = lazy(() => import('../pages/Dashboard'))
 // const Modals = lazy(() => import('../pages/Modals'))
 // const Tables = lazy(() => import('../pages/Tables'))
 // const Page404 = lazy(() => import('../pages/404'))
-const Blank = lazy(() => import('../pages/Blank'))
+const Blank = lazy(() => import('../pages/Blank'));
 
 /**
  * ⚠ These are internal routes!
@@ -24,7 +24,7 @@ const Blank = lazy(() => import('../pages/Blank'))
 const routes = [
     {
         path: '/dashboard', // the url
-        component: Dashboard, // view rendered
+        component: Dashboard // view rendered
     },
     // {
     //   path: '/forms',
@@ -56,8 +56,8 @@ const routes = [
     // },
     {
         path: '/blank',
-        component: Blank,
-    },
-]
+        component: Blank
+    }
+];
 
-export default routes
+export default routes;

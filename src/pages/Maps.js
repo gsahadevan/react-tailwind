@@ -1,5 +1,5 @@
-import {useState} from 'react';
-import {Map, GeoJSON} from 'react-leaflet';
+import { useState } from 'react';
+import { Map, GeoJSON } from 'react-leaflet';
 import PageTitle from '../components/Typography/PageTitle';
 import mapDataStates from '../assets/maps/germany_states.geo.json';
 import worldMap from '../assets/maps/world.geo.json';
@@ -51,23 +51,27 @@ function Maps() {
             <div className="flex items-stretch space-x-4">
                 <div className="w-1/3">
                     <div className="bg-white rounded shadow-xl dark:bg-gray-800 dark:text-gray-300 p-4">
-                        <p className="mb-4 font-semibold text-gray-800 dark:text-gray-300">D3 - Germany</p>
+                        <p className="mb-4 font-semibold text-gray-800 dark:text-gray-300">
+                            D3 - Germany
+                        </p>
                         <MapsD3 mapData={mapDataStates.features} />
                     </div>
                 </div>
             </div>
 
             <div className="flex flex-row my-5">
-                    <div className="bg-white rounded shadow-xl dark:bg-gray-800 dark:text-gray-300 p-4">
-                        <p className="mb-4 font-semibold text-gray-800 dark:text-gray-300">D3 - World Map</p>
-                        <WorldMap data={worldMap} property={property} />
-                        <h2>Select property to highlight</h2>
-                        <select value={property} onChange={(event) => setProperty(event.target.value)}>
-                            <option value="pop_est">Population</option>
-                            <option value="name_len">Name length</option>
-                            <option value="gdp_md_est">GDP</option>
-                        </select>
-                    </div>
+                <div className="bg-white rounded shadow-xl dark:bg-gray-800 dark:text-gray-300 p-4">
+                    <p className="mb-4 font-semibold text-gray-800 dark:text-gray-300">
+                        D3 - World Map
+                    </p>
+                    <WorldMap data={worldMap} property={property} />
+                    <h2>Select property to highlight</h2>
+                    <select value={property} onChange={(event) => setProperty(event.target.value)}>
+                        <option value="pop_est">Population</option>
+                        <option value="name_len">Name length</option>
+                        <option value="gdp_md_est">GDP</option>
+                    </select>
+                </div>
             </div>
 
             <SectionTitle>React Leaflet</SectionTitle>

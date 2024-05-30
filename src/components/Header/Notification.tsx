@@ -1,7 +1,7 @@
 import React from 'react';
 import BellIcon from '@heroicons/react/24/outline/BellIcon';
 
-const Notification = () : JSX.Element => {
+const Notification = (): JSX.Element => {
     return (
         <>
             <div className="relative align-middle rounded-md focus:outline-none focus:shadow-outline-purple cursor-pointer">
@@ -13,6 +13,6 @@ const Notification = () : JSX.Element => {
             </div>
         </>
     );
-}
+};
 
 export default Notification;

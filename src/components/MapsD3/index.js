@@ -1,8 +1,8 @@
-import React, {useEffect, useRef} from 'react';
-import {select} from 'd3';
+import React, { useEffect, useRef } from 'react';
+import { select } from 'd3';
 import * as d3 from 'd3-geo';
 
-function MapsD3({mapData}) {
+function MapsD3({ mapData }) {
     const map = useRef(null);
 
     useEffect(() => {

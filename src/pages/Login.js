@@ -1,9 +1,9 @@
 import React from 'react';
-import {Link} from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 import ImageLight from '../assets/img/login-office.jpeg';
 import ImageDark from '../assets/img/login-office-dark.jpeg';
-import {Label, Input, Button} from '@windmill/react-ui';
+import { Label, Input, Button } from '@windmill/react-ui';
 
 function Login() {
     return (
@@ -26,7 +26,9 @@ function Login() {
                     </div>
                     <main className="flex items-center justify-center p-6 sm:p-12 md:w-1/2">
                         <div className="w-full">
-                            <h1 className="mb-4 text-xl font-semibold text-gray-700 dark:text-gray-200">Login</h1>
+                            <h1 className="mb-4 text-xl font-semibold text-gray-700 dark:text-gray-200">
+                                Login
+                            </h1>
                             <Label>
                                 <span>Email</span>
                                 <Input className="mt-1" type="email" placeholder="john@doe.com" />
@@ -34,7 +36,11 @@ function Login() {
 
                             <Label className="mt-4">
                                 <span>Password</span>
-                                <Input className="mt-1" type="password" placeholder="***************" />
+                                <Input
+                                    className="mt-1"
+                                    type="password"
+                                    placeholder="***************"
+                                />
                             </Label>
 
                             <Button className="mt-4" block tag={Link} to="/app">

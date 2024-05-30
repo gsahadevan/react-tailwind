@@ -14,6 +14,6 @@ const SearchBox = (): JSX.Element => {
             />
         </div>
     );
-}
+};
 
 export default SearchBox;

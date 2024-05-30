@@ -113,9 +113,11 @@ export const barOptions = {
     options: {
         responsive: true,
         scales: {
-            xAxes: [{
-                barThickness: 2
-            }]
+            xAxes: [
+                {
+                    barThickness: 2
+                }
+            ]
         }
     },
     legend: {
