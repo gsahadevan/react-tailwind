@@ -1,6 +1,6 @@
 import { DocumentIcon, HomeIcon } from '@heroicons/react/24/outline';
 import React from 'react';
-import { Link, NavLink, useLocation } from 'react-router-dom';
+import { NavLink, useLocation } from 'react-router-dom';
 
 const Sidebar = (): JSX.Element => {
 
@@ -19,8 +19,6 @@ const Sidebar = (): JSX.Element => {
         },
     ];
 
-
-
     return (
         <aside className="z-30 flex-shrink-0 hidden w-64 overflow-y-auto bg-white dark:bg-gray-800 lg:block shadow-lg">
             <div className="py-4 text-gray-500 dark:text-gray-400">
@@ -35,7 +33,7 @@ const Sidebar = (): JSX.Element => {
                                 <NavLink
                                     end
                                     to={route.path}
-                                    className={({ isActive }) => `${isActive ? 'font-semibold  bg-base-200 ' : 'font-normal'}`} >
+                                    className={({ isActive }) => `${isActive ? 'font-semibold  bg-base-200' : 'font-normal'}`} >
                                     <div className="text-sm px-4 py-2 flex items-center hover:bg-gray-100 dark:hover:bg-gray-900 dark:hover:text-gray-100 rounded">
                                         {route.icon}
                                         <span>{route.name}</span>
@@ -46,7 +44,7 @@ const Sidebar = (): JSX.Element => {
                     })}
                 </ul>
             </div>
-        </aside >
+        </aside>
     );
 }
 
