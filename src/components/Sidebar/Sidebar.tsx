@@ -1,4 +1,4 @@
-import { DocumentIcon, HomeIcon } from '@heroicons/react/24/outline';
+import { DocumentIcon, HomeIcon, FolderIcon } from '@heroicons/react/24/outline';
 import React from 'react';
 import { NavLink, useLocation } from 'react-router-dom';
 
@@ -15,6 +15,11 @@ const Sidebar = (): JSX.Element => {
             path: '/blank',
             icon: <DocumentIcon className={iconClasses} />,
             name: 'Blank Page'
+        },
+        {
+            path: '/components',
+            icon: <FolderIcon className={iconClasses} />,
+            name: 'Components'
         }
     ];
 

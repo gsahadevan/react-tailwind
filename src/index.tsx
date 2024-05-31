@@ -9,6 +9,7 @@ import Dashboard from './pages/Dashboard';
 import NotFoundPage from './pages/NotFoundPage';
 import Blank from './pages/Blank';
 import { ThemeProvider } from './contexts/ThemeContext';
+import Components from './pages/Components';
 
 const router = createBrowserRouter([
     {
@@ -23,6 +24,10 @@ const router = createBrowserRouter([
             {
                 path: '/blank',
                 element: <Blank />
+            },
+            {
+                path: '/components',
+                element: <Components />
             }
         ]
     }
